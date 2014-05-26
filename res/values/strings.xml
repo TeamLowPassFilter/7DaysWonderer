@@ -4,5 +4,6 @@
     <string name="app_name">7DaysWonderer</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="menu_button">Menu</string>
 
 </resources>
