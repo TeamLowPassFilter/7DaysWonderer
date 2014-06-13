@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ListViewActivity extends Activity 
+public class TipsListActivity extends Activity 
 {
 	/**
 	 * ListViewに表示する要素のクラス
@@ -141,13 +141,23 @@ public class ListViewActivity extends Activity
 				ListViewItem item = (ListViewItem)listView.getItemAtPosition(position);
 				
 				// ImageViewActivityに遷移するためのインテントを作成する
-				Intent intent = new Intent(ListViewActivity.this, ImageViewActivity.class);
+				Intent intent = new Intent(TipsListActivity.this, ImageViewActivity.class);
 				
 				// インテントに、選択した要素のresourceID値をセットする
 				intent.putExtra( "resourceID", item.getResourceID());
 				
 				// ImageViewActivityへと遷移する
 				startActivity(intent);
+			}
+		});
+		
+		// 「BACK」を押したらアクティビティを終了させる
+		TextView backText = (TextView)findViewById(R.id.backText);
+		backText.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				finish();
 			}
 		});
 	}

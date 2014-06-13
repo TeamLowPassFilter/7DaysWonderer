@@ -20,7 +20,9 @@
             android:theme="@style/FullscreenTheme" >
         </activity>
         <activity android:name="ImageViewActivity"></activity>
-        <activity android:name="ListViewActivity">
+        <activity android:name="TipsListActivity">
+        </activity>
+        <activity android:name="baseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
